@@ -11,15 +11,12 @@ public class Main {
 
         String resposta;
 
-        for (int contador = 1; contador <= 10; contador++) {
+        for (int produto = 1; produto <= 15; produto++) {
 
-            System.out.print("Há o participante " + contador + "? (sim/não): ");
+            System.out.print("Informe o produto  " + produto + ": " );
             resposta = entrada.nextLine();
-
-            if (resposta.equalsIgnoreCase("sim")) {
-                System.out.println("Participante " + contador + " registrado!");
-            }
         }
+        System.out.print("Todos os produtos foram conferidos com sucesso: " );
 
         entrada.close();
     }
