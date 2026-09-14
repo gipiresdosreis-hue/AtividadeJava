@@ -9,35 +9,22 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        double valorProduto = 0;
-        double soma = 0;
-        int contador = 0;
-        String continuar;
+        String resposta;
 
-        do {
+        for (int contador = 1; contador <= 10; contador++) {
 
-            System.out.print("Informe o valor do produto: ");
+            System.out.print("Há o participante " + contador + "? (sim/não): ");
+            resposta = entrada.nextLine();
 
-            valorProduto = entrada.nextDouble();
-
-            soma = soma + valorProduto;
-
-            contador++;
-
-            System.out.print("Deseja continuar? (s/n): ");
-
-            entrada.nextLine(); // Limpa o buffer do Scanner
-
-            continuar = entrada.nextLine();
-
-        } while (continuar.equalsIgnoreCase("s")
-                || continuar.equalsIgnoreCase("sim"));
-
-        System.out.println("Voce comprou " + contador + " itens.");
-        System.out.println("A soma dos produtos é: " + soma);
+            if (resposta.equalsIgnoreCase("sim")) {
+                System.out.println("Participante " + contador + " registrado!");
+            }
+        }
 
         entrada.close();
     }
 }
+
+
 
 
