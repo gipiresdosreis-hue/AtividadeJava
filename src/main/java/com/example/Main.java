@@ -2,14 +2,13 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int[] numeros = new int[5];
-        numeros[0] = 10;
-        numeros[1] = 20;
-        numeros[2] = 30;
-        numeros[3] = 40;
-        numeros[4] = 50;
+        int[] [] matriz = new int [2] [2];
+        matriz[0][0] = 1;
+        matriz[0][1] = 2;
+        matriz[1][0] =3;
+        matriz[1][1] =3;
 
-        System.out.println("Primeiro elemento: " + numeros[0]);
+        System.out.println(matriz [1][0]);
     }
 }
 
