@@ -1,27 +1,17 @@
-
-package com.example;
-
-import java.util.Scanner;
+package org.example;
 
 public class Main {
-
     public static void main(String[] args) {
+        int[] numeros = new int[5];
+        numeros[0] = 10;
+        numeros[1] = 20;
+        numeros[2] = 30;
+        numeros[3] = 40;
+        numeros[4] = 50;
 
-        Scanner entrada = new Scanner(System.in);
-
-        String resposta;
-
-        for (int produto = 1; produto <= 15; produto++) {
-
-            System.out.print("Informe o produto  " + produto + ": " );
-            resposta = entrada.nextLine();
-        }
-        System.out.print("Todos os produtos foram conferidos com sucesso: " );
-
-        entrada.close();
+        System.out.println("Primeiro elemento: " + numeros[0]);
     }
 }
-
 
 
 
