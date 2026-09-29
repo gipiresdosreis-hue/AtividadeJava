@@ -5,38 +5,31 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-
-        double[] producao = new double[7];
-
-        double total = 0;
-        double maior = 0;
+        double[] temperatura = new double[10];
 
 
-        for (int i = 0; i < 7; i++) {
-            System.out.print("Digite a produção da semana " + (i + 1) + ": ");
-            producao[i] = entrada.nextDouble();
+        System.out.println("Informe os valores das 10 temperaturas:");
 
 
-            total = total + producao[i];
-
-
-            if (i == 0 || producao[i] > maior) {
-                maior = producao[i];
-            }
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Temperatura " + (i + 1) + ": ");
+            temperatura[i] = entrada.nextDouble();
         }
 
+        System.out.println("Temperaturas acima de 30 graus:");
 
-        double media = total / 7;
 
-
-        System.out.println("RESULTADOS");
-        System.out.println("Produção total: " + total + " toneladas");
-        System.out.println("Média semanal: " + media + " toneladas");
-        System.out.println("Maior produção: " + maior + " toneladas");
+        for (int i = 0; i < 10; i++) {
+            if (temperatura[i] > 30) {
+                System.out.println(temperatura[i] + " graus");
+            }
+        }
 
         entrada.close();
     }
 }
+
+
 
 
 
