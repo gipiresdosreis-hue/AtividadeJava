@@ -1,41 +1,29 @@
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[][] focos = new int[5][5];
+        double[][] fertilidade = new double[6][6];
 
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                System.out.print("Digite a quantidade de focos na posição [" + i + "][" + j + "]: ");
-                focos[i][j] = scanner.nextInt();
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                System.out.print("Digite o índice de fertilidade da posição [" + i + "][" + j + "]: ");
+                fertilidade[i][j] = scanner.nextDouble();
             }
         }
 
 
-        int maiorFoco = focos[0][0];
-        int linhaMaior = 0;
-        int colunaMaior = 0;
-
-
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                if (focos[i][j] > maiorFoco) {
-                    maiorFoco = focos[i][j];
-                    linhaMaior = i;
-                    colunaMaior = j;
-                }
+        System.out.println("MÉDIA DE FERTILIDADE POR LINHA");
+        for (int i = 0; i < 6; i++) {
+            double somaLinha = 0;
+            for (int j = 0; j < 6; j++) {
+                somaLinha += fertilidade[i][j];
             }
+            double mediaLinha = somaLinha / 6.0;
+            System.out.printf("Média da Linha %d: %.2f%n", (i + 1), mediaLinha);
         }
-
-        // 4. Exibição do resultado
-        System.out.println("\n--- RESULTADO ---");
-        System.out.println("A região com maior quantidade de focos é a Posição [" + linhaMaior + "][" + colunaMaior + "].");
-        System.out.println("Quantidade de focos nessa região: " + maiorFoco);
 
         scanner.close();
     }
 }
-
