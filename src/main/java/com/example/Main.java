@@ -5,25 +5,28 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        double[] temperatura = new double[10];
+        double[] setor= new double[12];
 
 
-        System.out.println("Informe os valores das 10 temperaturas:");
+        System.out.println("Informe o valor de consumo de agua de cada um dos doze setores: " );
 
 
         for (int i = 0; i < 10; i++) {
-            System.out.print("Temperatura " + (i + 1) + ": ");
-            temperatura[i] = entrada.nextDouble();
+            System.out.print("Consumo de agua " + (i + 1) + ": ");
+            setor[i] = entrada.nextDouble();
         }
 
-        System.out.println("Temperaturas acima de 30 graus:");
+        System.out.println("Setor que consumiu mais agua :");
 
+        double maior = setor[0];
 
-        for (int i = 0; i < 10; i++) {
-            if (temperatura[i] > 30) {
-                System.out.println(temperatura[i] + " graus");
+        for (int i = 1; i < 10; i++) {
+            if (setor[i] > maior) {
+                maior = setor[i];
             }
         }
+
+        System.out.println(maior);
 
         entrada.close();
     }
