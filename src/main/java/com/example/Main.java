@@ -1,16 +1,43 @@
-package org.example;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] [] matriz = new int [2] [2];
-        matriz[0][0] = 1;
-        matriz[0][1] = 2;
-        matriz[1][0] =3;
-        matriz[1][1] =3;
 
-        System.out.println(matriz [1][0]);
+        Scanner entrada = new Scanner(System.in);
+
+
+        double[] producao = new double[7];
+
+        double total = 0;
+        double maior = 0;
+
+
+        for (int i = 0; i < 7; i++) {
+            System.out.print("Digite a produção da semana " + (i + 1) + ": ");
+            producao[i] = entrada.nextDouble();
+
+
+            total = total + producao[i];
+
+
+            if (i == 0 || producao[i] > maior) {
+                maior = producao[i];
+            }
+        }
+
+
+        double media = total / 7;
+
+
+        System.out.println("RESULTADOS");
+        System.out.println("Produção total: " + total + " toneladas");
+        System.out.println("Média semanal: " + media + " toneladas");
+        System.out.println("Maior produção: " + maior + " toneladas");
+
+        entrada.close();
     }
 }
+
 
 
 
