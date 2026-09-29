@@ -5,32 +5,27 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        double[] talhoes = new double[12];
-        double soma = 0;
+        double[] fazendas = new double[8];
 
-        System.out.println("Informe a quantidade de hortaliças de cada talhão:");
+        System.out.println("Informe a umidade do solo das oito áreas da fazenda:");
 
-
-        for (int i = 0; i < 12; i++) {
-            System.out.print("Talhão " + (i + 1) + ": ");
-            talhoes[i] = entrada.nextDouble();
-
-            soma = soma + talhoes[i];
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Umidade da área " + (i + 1) + ": ");
+            fazendas[i] = entrada.nextDouble();
         }
 
+        System.out.println("\nÁreas com umidade inferior a 40%:");
 
-        System.out.println("Quantidade de hortaliças de cada talhão:");
-
-        for (int i = 0; i < 12; i++) {
-            System.out.println("Talhão " + (i + 1) + ": " + talhoes[i]);
+        for (int i = 0; i < 8; i++) {
+            if (fazendas[i] < 40) {
+                System.out.println("Área " + (i + 1) + ": " + fazendas[i] + "%");
+            }
         }
-
-
-        System.out.println("O total geral é: " + soma);
 
         entrada.close();
     }
 }
+
 
 
 
