@@ -5,33 +5,32 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        double[] setor= new double[12];
+        double[] talhoes = new double[12];
+        double soma = 0;
+
+        System.out.println("Informe a quantidade de hortaliças de cada talhão:");
 
 
-        System.out.println("Informe o valor de consumo de agua de cada um dos doze setores: " );
+        for (int i = 0; i < 12; i++) {
+            System.out.print("Talhão " + (i + 1) + ": ");
+            talhoes[i] = entrada.nextDouble();
 
-
-        for (int i = 0; i < 10; i++) {
-            System.out.print("Consumo de agua " + (i + 1) + ": ");
-            setor[i] = entrada.nextDouble();
+            soma = soma + talhoes[i];
         }
 
-        System.out.println("Setor que consumiu mais agua :");
 
-        double maior = setor[0];
+        System.out.println("Quantidade de hortaliças de cada talhão:");
 
-        for (int i = 1; i < 10; i++) {
-            if (setor[i] > maior) {
-                maior = setor[i];
-            }
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Talhão " + (i + 1) + ": " + talhoes[i]);
         }
 
-        System.out.println(maior);
+
+        System.out.println("O total geral é: " + soma);
 
         entrada.close();
     }
 }
-
 
 
 
