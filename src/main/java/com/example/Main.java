@@ -1,16 +1,45 @@
-package org.example;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] [] matriz = new int [2] [2];
-        matriz[0][0] = 1;
-        matriz[0][1] = 2;
-        matriz[1][0] =3;
-        matriz[1][1] =3;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(matriz [1][0]);
+        int[][] producao = new int[4][12];
+
+
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Digite a produção do Pomar " + (i + 1) + ":");
+
+            for (int j = 0; j < 12; j++) {
+                System.out.print("Mês " + (j + 1) + ": ");
+                producao[i][j] = scanner.nextInt();
+            }
+        }
+
+        int maiorProducao = 0;
+        int pomarMaior = 0;
+
+
+        for (int i = 0; i < 4; i++) {
+            int totalAnual = 0;
+
+            for (int j = 0; j < 12; j++) {
+                totalAnual += producao[i][j];
+            }
+
+            System.out.println("Produção anual do Pomar " + (i + 1) + ": " + totalAnual);
+
+            if (totalAnual > maiorProducao) {
+                maiorProducao = totalAnual;
+                pomarMaior = i + 1;
+            }
+        }
+
+        System.out.println("O Pomar " + pomarMaior +
+                " obteve a maior produção anual: " + maiorProducao);
+
+        scanner.close();
     }
 }
-
 
 
