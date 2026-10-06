@@ -6,15 +6,15 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        int [] valores = { 12, 45, 8, 90, 23};
-        int maior = valores[0];
+        int [] valores = { 4, 7, 8, 11, 16, 20 };
+        int contador  = 0;
         for (int i = 0; i < valores.length; i ++){
-            if (valores[i] > maior ){
-                maior = valores[i];
+            if (valores[i] % 2 ==0 ){
+                contador++;
             }
         }
 
-        System.out.println("O maior valor é :  " + maior  );
+        System.out.println("A quantidade de números pares é :  " + contador  );
 
         entrada.close();
     }
