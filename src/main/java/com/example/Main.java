@@ -6,14 +6,15 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        int [] valores = { 10, 20, 30, 40, 50};
-        int soma = 0;
+        int [] valores = { 12, 45, 8, 90, 23};
+        int maior = valores[0];
         for (int i = 0; i < valores.length; i ++){
-            soma = soma + valores[i];
+            if (valores[i] > maior ){
+                maior = valores[i];
+            }
         }
 
-
-        System.out.println("A soma é de: " + soma );
+        System.out.println("O maior valor é :  " + maior  );
 
         entrada.close();
     }
