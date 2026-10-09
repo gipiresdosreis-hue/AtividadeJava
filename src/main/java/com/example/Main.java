@@ -4,13 +4,14 @@ public class Main {
     public static void main(String[] args) {
 
 
-        converterCparaF( 20 * 1.8 + 32);
+       soma( 8, 10, 10 );
+
 
 
     }
 
-    public static void converterCparaF(double a) {
-        System.out.println(" O grau convertido para F é  " + a );
+    public static void soma(double a, double b, double c ) {
+        System.out.println( " A media das notas é : " + (a + b + c)/3 );
     }
 
 }
