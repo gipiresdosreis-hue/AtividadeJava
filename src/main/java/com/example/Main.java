@@ -1,26 +1,32 @@
 package com.example;
 
-import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        minhaMensagem();
+        somarValoresComParametro(56, 36);
+        somarValoresComParametro(58, 90);
+        System.out.println(subtracaoValores(56 , 36));
+        System.out.println(exibirMsg("Venha feriado!"));
 
-        int[] valores = {8, 7, 9, 10, 6};
-        int soma = 0;
-        double media = 0;
-
-        for (int i = 0; i < 5; i++) {
-            soma = soma + valores[i];
-        }
-
-        media = (double) soma / 5;
-
-        System.out.println("A soma é de: " + soma + " e a média é de: " + media);
-
-        entrada.close();
     }
+
+    public static void minhaMensagem() {
+        System.out.println("Minha msg!");
+    }
+    public static String exibirMsg (String text){
+        return text;
+    }
+
+    public static int subtracaoValores(int c, int d){
+        return c-d;
+    }
+
+
+    public static void somarValoresComParametro(int a, int b) {
+        System.out.println(a + b);
+    }
+
 }
+
 
