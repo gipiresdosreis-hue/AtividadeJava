@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-        somar(56, 36);
+        dobrar(56 * 2 );
 
 
     }
 
-    public static void somar(int a, int b) {
-        System.out.println(a + b);
+    public static void dobrar(int a) {
+        System.out.println(" O dobro do numero é " + a );
     }
 
 }
