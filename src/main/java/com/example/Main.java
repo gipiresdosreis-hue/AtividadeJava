@@ -4,13 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-        dobrar(56 * 2 );
+        converterCparaF( 20 * 1.8 + 32);
 
 
     }
 
-    public static void dobrar(int a) {
-        System.out.println(" O dobro do numero é " + a );
+    public static void converterCparaF(double a) {
+        System.out.println(" O grau convertido para F é  " + a );
     }
 
 }
