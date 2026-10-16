@@ -16,6 +16,7 @@ public class Main {
         System.out.print("Digite um número inteiro: ");
         int numero = entrada.nextInt();
 
+
         if (verificarPar(numero)) {
             System.out.println("O número é par!");
         } else {
