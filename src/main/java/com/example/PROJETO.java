@@ -3,19 +3,19 @@ package com.example;
 
 public class PROJETO {
 
-        public static long calcularFatorial(int numero) {
-            long fatorial = 1;
+        public static int calcularPotencia(int base, int expoente) {
+            int resultado = 1;
 
-            for (int i = 1; i <= numero; i++) {
-                fatorial = fatorial * i;
+            for (int i = 1; i <= expoente; i++) {
+                resultado = resultado * base;
             }
 
-            return fatorial;
+            return resultado;
         }
 
         public static void main(String[] args) {
-            long resultado = calcularFatorial(5);
+            int resultado = calcularPotencia(2, 3);
 
-            System.out.println("O fatorial é: " + resultado);
+            System.out.println("O resultado da potência é: " + resultado);
         }
     }
