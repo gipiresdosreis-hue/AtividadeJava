@@ -21,6 +21,7 @@ public class Main {
             System.out.println("O número é ímpar!");
         }
 
+
         entrada.close();
     }
 }
