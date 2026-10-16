@@ -17,6 +17,7 @@ public class Main {
         int numero = entrada.nextInt();
 
 
+
         if (verificarPar(numero)) {
             System.out.println("O número é par!");
         } else {
