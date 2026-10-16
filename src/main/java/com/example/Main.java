@@ -1,16 +1,30 @@
 package org.example;
 
-public class Main {
-    public static void main(String[] args) {
-        int[] [] matriz = new int [2] [2];
-        matriz[0][0] = 1;
-        matriz[0][1] = 2;
-        matriz[1][0] =3;
-        matriz[1][1] =3;
 
-        System.out.println(matriz [1][0]);
+import java.util.Scanner;
+
+public class Main {
+
+    public static boolean verificarPar(int numero) {
+        return numero % 2 == 0;
+    }
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = entrada.nextInt();
+
+        if (verificarPar(numero)) {
+            System.out.println("O número é par!");
+        } else {
+            System.out.println("O número é ímpar!");
+        }
+
+        entrada.close();
     }
 }
+
 
 
 
